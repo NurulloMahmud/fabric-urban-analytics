@@ -1,0 +1,12 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Dataflow",
+    "displayName": "df_ingest_taxi_zone_lookup",
+    "description": ""
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "e732687e-257c-b929-464a-d1aaf9db79f2"
+  }
+}

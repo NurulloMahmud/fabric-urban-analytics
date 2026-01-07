@@ -1,0 +1,69 @@
+table DimFX
+	lineageTag: 513b846a-318b-4704-9a97-f76cde40e75e
+	sourceLineageTag: [dbo].[DimFX]
+
+	column fx_date
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: date
+		lineageTag: 06d44904-605f-4cf1-a63f-e98e9a0352bd
+		sourceLineageTag: fx_date
+		summarizeBy: none
+		sourceColumn: fx_date
+
+		annotation SummarizationSetBy = Automatic
+
+	column usd_eur_rate
+		dataType: double
+		sourceProviderType: float
+		lineageTag: 93f2a2f3-4419-44f4-9e06-db541ae320e8
+		sourceLineageTag: usd_eur_rate
+		summarizeBy: sum
+		sourceColumn: usd_eur_rate
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column fx_year
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 8c994ee4-4080-412c-99bd-7c3b97399d58
+		sourceLineageTag: fx_year
+		summarizeBy: sum
+		sourceColumn: fx_year
+
+		annotation SummarizationSetBy = Automatic
+
+	column fx_month
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 0af36170-13fb-4313-b6a0-b41a9cfcdc34
+		sourceLineageTag: fx_month
+		summarizeBy: sum
+		sourceColumn: fx_month
+
+		annotation SummarizationSetBy = Automatic
+
+	column fx_day
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 4fc620e6-a303-43b4-bfe9-ffb6e06b016b
+		sourceLineageTag: fx_day
+		summarizeBy: sum
+		sourceColumn: fx_day
+
+		annotation SummarizationSetBy = Automatic
+
+	partition DimFX = entity
+		mode: directLake
+		source
+			entityName: DimFX
+			schemaName: dbo
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,32 @@
+{
+  "formatVersion": "202502",
+  "computeEngineSettings": {},
+  "name": "df_ingest_ecb_bronze",
+  "queryGroups": [],
+  "documentLocale": "en-US",
+  "queriesMetadata": {
+    "D USD EUR SP00": {
+      "queryId": "63cfba88-2e65-444d-a5e1-9761b3c7d7a4",
+      "queryName": "D USD EUR SP00",
+      "loadEnabled": false
+    },
+    "D USD EUR SP00_DataDestination": {
+      "queryId": "76e12853-e7d4-435e-a826-7d8168cec2d8",
+      "queryName": "D USD EUR SP00_DataDestination",
+      "isHidden": true,
+      "loadEnabled": false
+    }
+  },
+  "connections": [
+    {
+      "path": "https://data-api.ecb.europa.eu/service/data/EXR/D.USD.EUR.SP00.A?format=csvdata",
+      "kind": "Web",
+      "connectionId": "{\"ClusterId\":\"e3e3d554-3983-475d-96c4-8dbb508dd3b2\",\"DatasourceId\":\"f642926f-e842-49c4-92d3-05bd990870f7\"}"
+    },
+    {
+      "path": "Lakehouse",
+      "kind": "Lakehouse",
+      "connectionId": "{\"ClusterId\":\"e3e3d554-3983-475d-96c4-8dbb508dd3b2\",\"DatasourceId\":\"e021cfd8-5092-4632-bad3-e758925ee319\"}"
+    }
+  ]
+}

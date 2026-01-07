@@ -1,0 +1,32 @@
+{
+  "formatVersion": "202502",
+  "computeEngineSettings": {},
+  "name": "ingest_taxi_zone_lookup",
+  "queryGroups": [],
+  "documentLocale": "en-US",
+  "queriesMetadata": {
+    "Query": {
+      "queryId": "69e887c9-2a6d-4642-85d4-b88d5a345341",
+      "queryName": "Query",
+      "loadEnabled": false
+    },
+    "Query_DataDestination": {
+      "queryId": "5ea0d376-dffd-443a-9bc9-d16c84ac77d3",
+      "queryName": "Query_DataDestination",
+      "isHidden": true,
+      "loadEnabled": false
+    }
+  },
+  "connections": [
+    {
+      "path": "https://d37ci6vzurychx.cloudfront.net/misc/taxi_zone_lookup.csv",
+      "kind": "Web",
+      "connectionId": "{\"ClusterId\":\"e3e3d554-3983-475d-96c4-8dbb508dd3b2\",\"DatasourceId\":\"b5ec323d-b955-4e9f-9888-074cffeeb494\"}"
+    },
+    {
+      "path": "Lakehouse",
+      "kind": "Lakehouse",
+      "connectionId": "{\"ClusterId\":\"e3e3d554-3983-475d-96c4-8dbb508dd3b2\",\"DatasourceId\":\"e021cfd8-5092-4632-bad3-e758925ee319\"}"
+    }
+  ]
+}
