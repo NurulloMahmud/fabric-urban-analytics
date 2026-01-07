@@ -1,0 +1,145 @@
+table FactAirQualityDaily
+	lineageTag: e0d94791-a3a2-4e42-8273-965e67b90689
+	sourceLineageTag: [dbo].[FactAirQualityDaily]
+
+	column year
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: b588190a-5141-43c3-9582-ba8e4dfd54c1
+		sourceLineageTag: year
+		summarizeBy: none
+		sourceColumn: year
+
+		annotation SummarizationSetBy = Automatic
+
+	column month
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 27d8dacd-86a8-412d-9264-07969eac76cf
+		sourceLineageTag: month
+		summarizeBy: none
+		sourceColumn: month
+
+		annotation SummarizationSetBy = Automatic
+
+	column day
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: e2b69ed5-a1bd-434c-a9c3-99394ab28f21
+		sourceLineageTag: day
+		summarizeBy: none
+		sourceColumn: day
+
+		annotation SummarizationSetBy = Automatic
+
+	column date_key
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 77e90edf-d368-4d62-8fcb-d71e9f29fa26
+		sourceLineageTag: date_key
+		summarizeBy: none
+		sourceColumn: date_key
+
+		annotation SummarizationSetBy = Automatic
+
+	column location_id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: d5e58b41-36a9-4d44-af81-2afada147c6f
+		sourceLineageTag: location_id
+		summarizeBy: none
+		sourceColumn: location_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column location_name
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 7f32f38c-0e2f-45fc-aa26-f644c0d3decb
+		sourceLineageTag: location_name
+		summarizeBy: none
+		sourceColumn: location_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column parameter_name
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 519ee448-ef19-4eca-b745-840b32450e07
+		sourceLineageTag: parameter_name
+		summarizeBy: none
+		sourceColumn: parameter_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column parameter_units
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 4a84f474-cf81-41a7-bed8-da3ac077f101
+		sourceLineageTag: parameter_units
+		summarizeBy: none
+		sourceColumn: parameter_units
+
+		annotation SummarizationSetBy = Automatic
+
+	column measurement_count
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 6bff23f1-1a99-4c0b-a7bb-3b274157e491
+		sourceLineageTag: measurement_count
+		summarizeBy: none
+		sourceColumn: measurement_count
+
+		annotation SummarizationSetBy = Automatic
+
+	column avg_value
+		dataType: double
+		sourceProviderType: float
+		lineageTag: 6584c55d-1f83-4f18-a1e7-198433e472d8
+		sourceLineageTag: avg_value
+		summarizeBy: none
+		sourceColumn: avg_value
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column min_value
+		dataType: double
+		sourceProviderType: float
+		lineageTag: 56ae54fc-c59d-4366-be1c-bb9c0fe70c75
+		sourceLineageTag: min_value
+		summarizeBy: none
+		sourceColumn: min_value
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column max_value
+		dataType: double
+		sourceProviderType: float
+		lineageTag: 035efdae-b6d3-4f2b-9c46-7151aa1b5810
+		sourceLineageTag: max_value
+		summarizeBy: none
+		sourceColumn: max_value
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition FactAirQualityDaily = entity
+		mode: directLake
+		source
+			entityName: FactAirQualityDaily
+			schemaName: dbo
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

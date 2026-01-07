@@ -1,0 +1,91 @@
+{
+  "formatVersion": "202502",
+  "computeEngineSettings": {},
+  "name": "df_ingest_worldbank_bronze",
+  "queryGroups": [],
+  "documentLocale": "en-US",
+  "queriesMetadata": {
+    "GDP_US": {
+      "queryId": "0dbb2393-c4be-4642-948a-646fdcf4beb5",
+      "queryName": "GDP_US"
+    },
+    "GDP_GB": {
+      "queryId": "0741c4bd-5fe9-4dfe-aed2-ed93521baf44",
+      "queryName": "GDP_GB"
+    },
+    "GDP_DE": {
+      "queryId": "4fcea0c9-dba7-4ab3-9cf7-26e65cee0599",
+      "queryName": "GDP_DE"
+    },
+    "GDP_FR": {
+      "queryId": "d8401856-d4ee-4b34-9c0b-cba554fba45b",
+      "queryName": "GDP_FR"
+    },
+    "GDP_JP": {
+      "queryId": "85687e43-236a-46ba-92f4-75923806d7a7",
+      "queryName": "GDP_JP"
+    },
+    "GDP_CN": {
+      "queryId": "6427ea01-81e3-4eda-bd11-9c7f053edae4",
+      "queryName": "GDP_CN"
+    },
+    "GDP_IN": {
+      "queryId": "0819ef52-75e9-4033-856b-9c5131605729",
+      "queryName": "GDP_IN"
+    },
+    "GDP_All_Countries": {
+      "queryId": "e66b6f35-2c32-46bb-ac3a-b8a99414b483",
+      "queryName": "GDP_All_Countries",
+      "loadEnabled": false
+    },
+    "GDP_All_Countries_DataDestination": {
+      "queryId": "7eb246af-61da-45a2-9d09-44863079c6e7",
+      "queryName": "GDP_All_Countries_DataDestination",
+      "isHidden": true,
+      "loadEnabled": false
+    }
+  },
+  "connections": [
+    {
+      "path": "https://api.worldbank.org/v2/country/US/indicator/NY.GDP.MKTP.CD?format=json&date=2015:2024&per_page=100",
+      "kind": "Web",
+      "connectionId": "{\"ClusterId\":\"e3e3d554-3983-475d-96c4-8dbb508dd3b2\",\"DatasourceId\":\"d5a2e630-ac77-45df-8e0d-6f1426528499\"}"
+    },
+    {
+      "path": "https://api.worldbank.org/v2/country/GB/indicator/NY.GDP.MKTP.CD",
+      "kind": "Web",
+      "connectionId": "{\"ClusterId\":\"e3e3d554-3983-475d-96c4-8dbb508dd3b2\",\"DatasourceId\":\"cee1f13a-13f9-4beb-9d70-b53c2342c57f\"}"
+    },
+    {
+      "path": "https://api.worldbank.org/v2/country/DE/indicator/NY.GDP.MKTP.CD",
+      "kind": "Web",
+      "connectionId": "{\"ClusterId\":\"e3e3d554-3983-475d-96c4-8dbb508dd3b2\",\"DatasourceId\":\"228f37f8-a0aa-4416-ac8b-b0388c0fee7e\"}"
+    },
+    {
+      "path": "https://api.worldbank.org/v2/country/FR/indicator/NY.GDP.MKTP.CD",
+      "kind": "Web",
+      "connectionId": "{\"ClusterId\":\"e3e3d554-3983-475d-96c4-8dbb508dd3b2\",\"DatasourceId\":\"f20d46ca-82a3-47ea-9ccc-197a4e0dd5d5\"}"
+    },
+    {
+      "path": "https://api.worldbank.org/v2/country/JP/indicator/NY.GDP.MKTP.CD",
+      "kind": "Web",
+      "connectionId": "{\"ClusterId\":\"e3e3d554-3983-475d-96c4-8dbb508dd3b2\",\"DatasourceId\":\"9679f8ba-b4b1-4112-b391-a7defac6e565\"}"
+    },
+    {
+      "path": "https://api.worldbank.org/v2/country/CN/indicator/NY.GDP.MKTP.CD",
+      "kind": "Web",
+      "connectionId": "{\"ClusterId\":\"e3e3d554-3983-475d-96c4-8dbb508dd3b2\",\"DatasourceId\":\"3440f77e-8e45-406b-944c-708f4f403121\"}"
+    },
+    {
+      "path": "https://api.worldbank.org/v2/country/IN/indicator/NY.GDP.MKTP.CD",
+      "kind": "Web",
+      "connectionId": "{\"ClusterId\":\"e3e3d554-3983-475d-96c4-8dbb508dd3b2\",\"DatasourceId\":\"0d4264ce-d061-4fa4-bbc5-a7f87fc7ee7e\"}"
+    },
+    {
+      "path": "Lakehouse",
+      "kind": "Lakehouse",
+      "connectionId": "{\"ClusterId\":\"e3e3d554-3983-475d-96c4-8dbb508dd3b2\",\"DatasourceId\":\"e021cfd8-5092-4632-bad3-e758925ee319\"}"
+    }
+  ],
+  "fastCombine": true
+}
