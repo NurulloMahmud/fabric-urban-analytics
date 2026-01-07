@@ -63,8 +63,3 @@ This project follows the **Medallion Architecture** pattern:
 - PySpark
 - Python (pandas, matplotlib, seaborn, plotly)
 - Delta Lake
-
-## Author
-**[Your Full Name]**  
-Data Engineering Intern  
-[Your Contact Info]
